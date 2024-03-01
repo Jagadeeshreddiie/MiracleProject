@@ -8,7 +8,7 @@ const navigate=useNavigate();
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:30021/orders/");
+        const response = await fetch("https://miracle-project-backend1.vercel.app/orders/");
         if (!response.ok) {
           throw new Error("Failed to fetch orders");
         }
