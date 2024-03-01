@@ -67,7 +67,7 @@ const handleGetLocation = () => {
                             <p>Phone : {each.phone}</p>
                             <div style={{ display: 'flex' }}>
                                 <button className="butt mech" onClick={handleGetLocation}>Book</button><br />
-                                <a href=`tel:+91${each.phone}`>
+                                <a href={`tel:+91${each.phone}`}>
                                 <button className="butt cust">Call</button></a>
                             </div>
                         </div>
