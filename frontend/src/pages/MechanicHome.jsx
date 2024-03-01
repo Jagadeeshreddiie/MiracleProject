@@ -27,7 +27,7 @@ const navigate=useNavigate();
 
   const handleAccept = async (id) => {
     try {
-      const response = await fetch("http://localhost:30021/accept", {
+      const response = await fetch("https://miracle-project-backend1.vercel.app/accept", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -60,7 +60,7 @@ const navigate=useNavigate();
             <p>Latitude: {order.latitude}</p>
             <div style={{ display: "flex" }}>
               {!order.status ? (
-                <a href="tel:+916305109362">
+                <a href={`tel:+91${order.phone}`}>
                 <button
                   className="butt mech"
                   onClick={() => handleAccept(order._id)}
@@ -68,7 +68,7 @@ const navigate=useNavigate();
                   Accept
                 </button></a>
               ) : (
-                <a href="tel:+916305109362">
+                <a href={`tel:+91${order.phone}`}>
                 <button className="butt cust">Accepted</button></a>
               )}
               <button
